@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="EscapeRoom"
+run/main_scene="res://DragNDrop/DragNDrop.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Main="*res://DragNDrop/Main.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
+[input]
+
+clic={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":3,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+vram_compression/import_etc=true
+environment/default_environment="res://default_env.tres"
