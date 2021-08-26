@@ -1,6 +1,5 @@
 [gd_scene load_steps=33 format=2]
 
-[ext_resource path="res://DragNDrop/Ubuntu-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://DragNDrop/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://DragNDrop/Images/background.jpg" type="Texture" id=3]
 [ext_resource path="res://DragNDrop/Instructions/Instruction9.png" type="Texture" id=4]
@@ -41,19 +40,22 @@ font_data = ExtResource( 2 )
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 25
-font_data = ExtResource( 1 )
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://DragNDrop/Ubuntu-Regular.ttf"
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = SubResource( 5 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=9]
 size = 25
-font_data = ExtResource( 1 )
+font_data = SubResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -306,7 +308,7 @@ margin_left = 30.1472
 margin_top = 64.1892
 margin_right = 568.148
 margin_bottom = 104.189
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 text = "                        L'algoritmo è sbagliato :("
 __meta__ = {
 "_editor_description_": ""
@@ -329,7 +331,7 @@ margin_left = 225.0
 margin_top = 150.0
 margin_right = 875.0
 margin_bottom = 470.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -339,7 +341,7 @@ margin_left = 74.5942
 margin_top = 62.7568
 margin_right = 612.594
 margin_bottom = 245.757
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 text = "                          Complimenti!
          
 Hai programmato le formiche correttamente!
@@ -352,7 +354,7 @@ margin_left = 225.0
 margin_top = 150.0
 margin_right = 875.0
 margin_bottom = 470.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -362,7 +364,7 @@ margin_left = 55.7297
 margin_top = 57.9542
 margin_right = 631.73
 margin_bottom = 210.954
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "          Ricorda che le formiche rilasciano
  feromoni per comunicare con le altre formiche,
 quindi segui la strada in cui ci sono più feromoni."

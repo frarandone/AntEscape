@@ -25,7 +25,9 @@ Main="*res://DragNDrop/Main.gd"
 
 [compression]
 
+formats/zstd/long_distance_matching=true
 formats/zstd/compression_level=6
+formats/zstd/window_log_size=30
 
 [display]
 
