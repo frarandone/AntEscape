@@ -13,6 +13,10 @@ _global_script_class_icons={
 
 }
 
+[android]
+
+modules=false
+
 [application]
 
 config/name="EscapeRoom"
@@ -50,4 +54,6 @@ quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 vram_compression/import_etc=true
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
 environment/default_environment="res://default_env.tres"
