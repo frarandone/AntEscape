@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mappa.png-3566f595a4b311d914aa1b6510a7c5ab.stex"
+path="res://.import/background.png-e30e26d684c54065f22aadf859baad0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DragNDrop/Images/mappa.png"
-dest_files=[ "res://.import/mappa.png-3566f595a4b311d914aa1b6510a7c5ab.stex" ]
+source_file="res://DragNDrop/Images/background.png"
+dest_files=[ "res://.import/background.png-e30e26d684c54065f22aadf859baad0c.stex" ]
 
 [params]
 

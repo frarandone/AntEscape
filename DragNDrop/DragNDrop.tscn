@@ -1,6 +1,8 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://DragNDrop/Ubuntu-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://DragNDrop/Images/background.png" type="Texture" id=1]
+[ext_resource path="res://DragNDrop/Images/mappa.png" type="Texture" id=2]
+[ext_resource path="res://DragNDrop/DancingScript-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://DragNDrop/Instructions/Instruction9.png" type="Texture" id=4]
 [ext_resource path="res://DragNDrop/Instructions/Instruction5.png" type="Texture" id=5]
 [ext_resource path="res://DragNDrop/Instructions/Instruction1.png" type="Texture" id=6]
@@ -11,7 +13,6 @@
 [ext_resource path="res://DragNDrop/Instructions/Instruction2.png" type="Texture" id=11]
 [ext_resource path="res://DragNDrop/Instructions/Instruction7.png" type="Texture" id=12]
 [ext_resource path="res://DragNDrop/Icon 1.gd" type="Script" id=13]
-[ext_resource path="res://DragNDrop/Images/Mappa.png" type="Texture" id=14]
 [ext_resource path="res://DragNDrop/RetryButton.gd" type="Script" id=15]
 [ext_resource path="res://DragNDrop/OKButton.gd" type="Script" id=16]
 [ext_resource path="res://DragNDrop/Instructions/Instruction3.png" type="Texture" id=17]
@@ -23,44 +24,42 @@
 [ext_resource path="res://DragNDrop/Images/ButtonHelp.png" type="Texture" id=23]
 [ext_resource path="res://DragNDrop/Images/ButtonBack.png" type="Texture" id=24]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.176471, 0.686275, 0.0901961, 1 )
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 2304, 3456 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 25
-font_data = ExtResource( 2 )
+size = 35
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 20
+size = 26
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+extra_spacing_top = -4
+font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="DynamicFontData" id=5]
-font_path = "res://DragNDrop/Ubuntu-Regular.ttf"
+bg_color = Color( 0.690196, 0.498039, 0.12549, 1 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 25
-font_data = SubResource( 5 )
+size = 42
+font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.690196, 0.498039, 0.12549, 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.690196, 0.498039, 0.12549, 1 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 25
-font_data = SubResource( 5 )
+size = 42
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Panel" parent="."]
-margin_top = 1.18921
 margin_right = 1022.0
-margin_bottom = 601.189
+margin_bottom = 600.0
 rect_clip_content = true
 mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
@@ -69,33 +68,36 @@ __meta__ = {
 }
 
 [node name="Instructions1" type="RichTextLabel" parent="Background"]
-margin_left = 9.56125
-margin_top = 7.77548
-margin_right = 386.561
-margin_bottom = 171.775
+margin_left = 15.0
+margin_top = 8.0
+margin_right = 387.0
+margin_bottom = 117.0
 custom_fonts/normal_font = SubResource( 2 )
-custom_colors/default_color = Color( 0.941176, 1, 0, 1 )
-text = "Programma le formiche a raggiungere il cibo e riportarlo al formicaio seguendo la strada più breve!"
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Come scelgono le formiche la strada migliore?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Instructions2" type="RichTextLabel" parent="Background"]
-margin_left = 14.99
-margin_top = 144.0
-margin_right = 312.99
-margin_bottom = 224.0
+margin_left = 12.5198
+margin_top = 78.6825
+margin_right = 379.52
+margin_bottom = 305.682
 custom_fonts/normal_font = SubResource( 3 )
-custom_colors/default_color = Color( 0.941176, 1, 0, 1 )
-text = "Riordina le istruzioni dell'algoritmo e poi premi OK"
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "
+Programma le formiche perchè raggiungano il cibo e lo riportino al fomicaio.
+Riordina le istruzioni dell’algoritmo e poi premi OK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mappa" type="Sprite" parent="Background"]
-position = Vector2( 37.027, 211.287 )
-scale = Vector2( 0.471657, 0.422369 )
-texture = ExtResource( 14 )
+position = Vector2( 169.305, 227.755 )
+rotation = 0.349066
+scale = Vector2( 0.11, 0.11 )
+texture = ExtResource( 2 )
 centered = false
 
 [node name="OkButton" type="TextureButton" parent="Background"]
@@ -302,13 +304,16 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelLose"]
-margin_left = 30.1472
-margin_top = 64.1892
-margin_right = 568.148
-margin_bottom = 104.189
+margin_left = 50.0
+margin_top = 65.0
+margin_right = 600.0
+margin_bottom = 200.0
 custom_fonts/normal_font = SubResource( 6 )
-text = "                        L'algoritmo è sbagliato :("
+bbcode_enabled = true
+bbcode_text = "[center]L'algoritmo è sbagliato[center]"
+text = "L'algoritmo è sbagliato"
 __meta__ = {
+"_edit_use_anchors_": false,
 "_editor_description_": ""
 }
 
@@ -335,16 +340,18 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelWin"]
-margin_left = 74.5942
-margin_top = 62.7568
-margin_right = 612.594
-margin_bottom = 245.757
+margin_left = 50.0
+margin_top = 45.0
+margin_right = 600.0
+margin_bottom = 320.0
 custom_fonts/normal_font = SubResource( 6 )
-text = "                          Complimenti!
-         
+bbcode_enabled = true
+bbcode_text = "[center]Complimenti!
 Hai programmato le formiche correttamente!
-
-                               7    4    6    1"
+ 7    4    6    1[center]"
+text = "Complimenti!
+Hai programmato le formiche correttamente!
+ 7    4    6    1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -361,20 +368,23 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelHelp"]
-margin_left = 55.7297
-margin_top = 57.9542
-margin_right = 631.73
-margin_bottom = 210.954
+margin_left = 50.0
+margin_top = 30.0
+margin_right = 600.0
+margin_bottom = 250.0
 custom_fonts/normal_font = SubResource( 9 )
-text = "          Ricorda che le formiche rilasciano
- feromoni per comunicare con le altre formiche,
-quindi segui la strada in cui ci sono più feromoni."
+bbcode_enabled = true
+bbcode_text = "[center] Ricorda che le formiche rilasciano
+feromoni per  comunicare con le altre formiche, quindi segui la strada in cui ci sono più feromoni.[center]"
+text = " Ricorda che le formiche rilasciano
+feromoni per  comunicare con le altre formiche, quindi segui la strada in cui ci sono più feromoni."
+scroll_active = false
 
 [node name="RetryHelpButton" type="TextureButton" parent="PanelHelp"]
-margin_left = 244.923
-margin_top = 187.832
-margin_right = 542.923
-margin_bottom = 280.832
+margin_left = 247.443
+margin_top = 253.348
+margin_right = 545.443
+margin_bottom = 346.348
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 24 )
 script = ExtResource( 22 )
