@@ -80,15 +80,14 @@ __meta__ = {
 }
 
 [node name="Instructions2" type="RichTextLabel" parent="Background"]
-margin_left = 12.5198
-margin_top = 78.6825
-margin_right = 379.52
-margin_bottom = 305.682
+margin_left = 13.0
+margin_top = 79.0
+margin_right = 377.0
+margin_bottom = 306.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "
-Programma le formiche perchè raggiungano il cibo e lo riportino al fomicaio.
-Riordina le istruzioni dell’algoritmo e poi premi OK"
+text = "Le formiche partono dal formicaio, scelgono in base alla quantità di feromone la strada migliore, raggiungono il cibo e lo riportano indietro al formicaio.
+Sai programmare il loro viaggio riordinando le istruzioni dell'algoritmo?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
